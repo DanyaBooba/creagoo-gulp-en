@@ -1,12 +1,12 @@
 <header class="container header--main">
     <div class="d-flex flex-wrap align-items-center justify-content-center">
         <ul class="nav me-auto header--adaptive-special-4">
-            <li><a href="/en/" class="nav-link header--text bg-light header--locale header--locale-active">EN</a></li>
+            <li><a href="/" class="nav-link header--text bg-light header--locale header--locale-active">RU</a></li>
         </ul>
         <div class="justify-content-center">
-            <a href="/">
+            <a href="/en/">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon header--logo-pc"
-                    alt="Логотип Creagoo" width="280" viewBox="0 0 1105 169">
+                    alt="Logo of Creagoo" width="280" viewBox="0 0 1105 169">
                     <path
                         d="M372,542.24l31.6-75a84.23,84.23,0,0,0-78.6-3,32,32,0,1,1-38.4,37.2,84,84,0,0,0-9.6,39,85.74,85.74,0,0,0,2,18.4l25.1-10.8,21.5,49.7,51.6-22.2,12.2,28.3-45.2,19.3a82.83,82.83,0,0,0,17.4,1.8,84.46,84.46,0,0,0,84.5-84.5,65.07,65.07,0,0,0-.4-7.7Z"
                         transform="translate(-276.98 -455.94)" />
@@ -31,7 +31,7 @@
                         d="M1382,540c0,25.68-16.89,44.28-58.47,44.28S1265,565.67,1265,540s16.89-44.28,58.47-44.28S1382,514.3,1382,540Zm-9.79,0c0-20.16-13.63-35.06-48.68-35.06s-48.68,14.9-48.68,35.06,13.63,35,48.68,35S1372.19,560.14,1372.19,540Z"
                         transform="translate(-276.98 -455.94)" />
                 </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon header--logo-mobile" alt="Логотип Creagoo" width="50"
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon header--logo-mobile" alt="Logo of Creagoo" width="50"
                     viewBox="0 0 169.1 169">
                     <path
                         d="M372,542.24l31.6-75a84.23,84.23,0,0,0-78.6-3,32,32,0,1,1-38.4,37.2,84,84,0,0,0-9.6,39,85.74,85.74,0,0,0,2,18.4l25.1-10.8,21.5,49.7,51.6-22.2,12.2,28.3-45.2,19.3a82.83,82.83,0,0,0,17.4,1.8,84.46,84.46,0,0,0,84.5-84.5,65.07,65.07,0,0,0-.4-7.7Z"
@@ -55,32 +55,32 @@
     <!-- MOBILE -->
     <div class="collapse  header--adaptive-4 mt-2" id="mobilemenu_full">
         <div class="list-group container list-group-flush p-0">
-            <a href="/games" class="list-group-item list-group-item-action">
-                Игры
+            <a href="/en/games" class="list-group-item list-group-item-action">
+                Games
             </a>
             <a href="/gallery.html" class="list-group-item list-group-item-action">
-                Галерея
+                Gallery
             </a>
             <a href="//news.creagoo.ru/creagoo" class="list-group-item list-group-item-action">
-                Новости
+                News
             </a>
             <a href="/about.html" class="list-group-item list-group-item-action">
-                Подробнее
+                About
             </a>
             <a href="/2022.html" class="list-group-item list-group-item-action">
                 2022
             </a>
 
             <a href="#" class="list-group-item list-group-item-action" onClick="ThemeChangeButton()" >
-                Сменить тему
+                Change theme
             </a>
             <a class="list-group-item text-tablet list-group-item-action">
-                Текущий язык: RU
+                Language: EN
             </a>
 
             <!-- SUPER MOBILE -->
-            <a href="/en" class="list-group-item text-mobile list-group-item-action">
-                Сменить язык
+            <a href="/" class="list-group-item text-mobile list-group-item-action">
+                Change lang
             </a>
         </div>
     </div>
@@ -90,28 +90,28 @@
     <div class="container">
         <div class="d-flex flex-wrap align-items-center justify-content-center">
             <ul class="nav me-auto">
-                <li><a class="nav-link header--text header--locale bg-light header--locale-disable header--adaptive-1">RU</a></li>
-                <li><a href="/en/" class="nav-link header--text bg-light header--locale header--locale-active">EN</a></li>
+                <li><a href="/" class="nav-link header--text header--locale bg-light header--locale-active">RU</a></li>
+                <li><a class="nav-link header--text bg-light header--locale header--locale-disable header--adaptive-1">EN</a></li>
             </ul>
             <ul class="nav justify-content-center header--adaptive-3">
                 @@if(context.activeItem == "games") {
-                <li><a class="nav-link nav--link-active">Игры</a></li>
+                <li><a class="nav-link nav--link-active">Games</a></li>
                 }
                 @@if(context.activeItem != "games") {
-                <li><a href="/games" class="nav-link nav--link">Игры</a></li>
+                <li><a href="/en/games" class="nav-link nav--link">Games</a></li>
                 }
-                <li><a href="//news.creagoo.ru/creagoo" class="nav-link nav--link">Новости</a></li>
+                <li><a href="//news.creagoo.ru/creagoo" class="nav-link nav--link">News</a></li>
                 @@if(context.activeItem == "gallery") {
-                <li><a class="nav-link nav--link-active">Галерея</a></li>
+                <li><a class="nav-link nav--link-active">Gallery</a></li>
                 }
                 @@if(context.activeItem != "gallery") {
-                <li><a href="/gallery.html" class="nav-link nav--link">Галерея</a></li>
+                <li><a href="/gallery.html" class="nav-link nav--link">Gallery</a></li>
                 }
                 @@if(context.activeItem == "about") {
-                <li><a class="nav-link nav--link-active">Подробнее</a></li>
+                <li><a class="nav-link nav--link-active">About</a></li>
                 }
                 @@if(context.activeItem != "about") {
-                <li><a href="/about.html" class="nav-link nav--link">Подробнее</a></li>
+                <li><a href="/about.html" class="nav-link nav--link">About</a></li>
                 }
                 <li><a href="/2022.html" class="nav-link bg-light nav--link text-dark"
                         style="border-radius: 8px">2022</a></li>
@@ -149,10 +149,10 @@
     <div class="collapse  mt-2 p-0" id="mobilemenu">
         <div class="list-group container list-group-flush">
             <a href="#" class="list-group-item list-group-item-action" onClick="ThemeChangeButton()">
-                Сменить тему
+                Change theme
             </a>
             <a href="#" class="list-group-item list-group-item-action">
-                Текущий язык: RU
+                Language: EN
             </a>
         </div>
     </div>
@@ -160,29 +160,29 @@
 
 <div class="offcanvas offcanvas-bg offcanvas-end" tabindex="-1" id="canvasprojects" aria-labelledby="offcanvasExampleLabel">
     <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Проекты класса yl:d</h5>
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Projects of yl:d</h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
         <div class="d-flex flex-wrap flex-column">
             <div class="mb-2">
-                <a href="//it.dybka.ru" class="nav-link header--text bg-light fs-5 header--locale header--locale-active py-3">
-                    Все проекты yl:d
+                <a href="//it.dybka.ru/en" class="nav-link header--text bg-light fs-5 header--locale header--locale-active py-3">
+                    All projects yl:d
                 </a>
             </div>
             <div class="mb-2">
                 <a href="//id.creagoo.ru" class="nav-link header--text bg-light fs-5 header--locale header--locale-active py-3">
-                    Личный кабинет
+                    Personal account
                 </a>
             </div>
             <div class="mb-2">
                 <a href="//news.creagoo.ru" class="nav-link header--text bg-light fs-5 header--locale header--locale-active py-3">
-                    Читать новости
+                    Read the news
                 </a>
             </div>
             <div class="mb-2">
                 <a class="nav-link header--text bg-light fs-5 header--locale header--locale-disable py-3">
-                    <s>Разработка сайтов</s>
+                    <s>Website development</s>
                 </a>
             </div>
         </div>

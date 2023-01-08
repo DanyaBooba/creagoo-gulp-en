@@ -25,7 +25,7 @@ function html(done) {
             collapseWhitespace: true,
             removeComments: true
         }))
-        .pipe(gulp.dest('./dist'));
+        .pipe(gulp.dest('./dist/en'));
 
     gulp.src('./src/games/**/*.html')
         .pipe(fileinclude())
@@ -35,10 +35,10 @@ function html(done) {
             collapseWhitespace: true,
             removeComments: true
         }))
-        .pipe(gulp.dest('./dist/games'));
+        .pipe(gulp.dest('./dist/en/games'));
 
     gulp.src('./src/_noedithtml/*.html')
-        .pipe(gulp.dest('./dist/static'));
+        .pipe(gulp.dest('./dist/en/static'));
 
     done();
 }
@@ -49,19 +49,19 @@ function getcss(done) {
         .pipe(csso())
         .pipe(concatCss('index.css'))
         .pipe(cssmin())
-        .pipe(gulp.dest('./dist/css'))
+        .pipe(gulp.dest('./dist/en/css'))
         .pipe(gulp.src('./src/_css/**/*.css'))
         .pipe(autoprefixer())
         .pipe(csso())
         .pipe(cssmin())
-        .pipe(gulp.dest('./dist/css'));
+        .pipe(gulp.dest('./dist/en/css'));
 
     done();
 }
 
 function images(done) {
     gulp.src('./src/img/**/*')
-        .pipe(gulp.dest('./dist/img'));
+        .pipe(gulp.dest('./dist/en/img'));
 
     done();
 }
@@ -70,12 +70,12 @@ function javascript(done) {
     gulp.src('./src/js/*.js')
         .pipe(concat('index.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('./dist/js'))
+        .pipe(gulp.dest('./dist/en/js'))
         .pipe(gulp.src('./src/js/not_compress/**/*.js'))
-        .pipe(gulp.dest('./dist/js'));
+        .pipe(gulp.dest('./dist/en/js'));
 
     gulp.src('./src/_js/**/*.js')
-        .pipe(gulp.dest('./dist/js'));
+        .pipe(gulp.dest('./dist/en/js'));
 
     done();
 }
@@ -83,9 +83,9 @@ function javascript(done) {
 function compressFonts(done) {
     gulp.src('./src/fonts/**/*.ttf')
         .pipe(ttf2woff2())
-        .pipe(gulp.dest('./dist/fonts'))
+        .pipe(gulp.dest('./dist/en/fonts'))
         .pipe(gulp.src('./src/fonts/**/*.{otf,woff,woff2}'))
-        .pipe(gulp.dest('./dist/fonts'));
+        .pipe(gulp.dest('./dist/en/fonts'));
 
     done();
 }
@@ -99,14 +99,14 @@ function compressImages(done) {
             interlaced: true,
             optimizationLevel: 3
         }))
-        .pipe(gulp.dest('./dist/img'));
+        .pipe(gulp.dest('./dist/en/img'));
 
     done();
 }
 
 function anotherFolders(done) {
     gulp.src('./src/.htaccess')
-        .pipe(gulp.dest('./dist'));
+        .pipe(gulp.dest('./dist/en'));
 
     done();
 }
