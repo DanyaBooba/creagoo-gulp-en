@@ -2,8 +2,8 @@
     <div class="container">
         <div class="d-flex flex-wrap align-items-center justify-content-center" style="padding-bottom: 12px">
             <ul class="nav me-auto header--adaptive-special-4">
-                <li><a href="/en/" class="nav-link header--text header--locale header--locale-active-en"
-                        style="background-color: #353535">EN</a>
+                <li><a href="/" class="nav-link header--text header--locale header--locale-active-en"
+                        style="background-color: #353535">RU</a>
                 </li>
             </ul>
             <div class="justify-content-center">
@@ -95,31 +95,31 @@
     <div class="container">
         <div class="d-flex flex-wrap align-items-center justify-content-center">
             <ul class="nav me-auto">
+                <li><a href="/" class="nav-link header--text header--locale header--locale-active-en"
+                        style="background-color: #353535">RU</a></li>
                 <li><a class="nav-link header--text header--locale header--locale-disable-en header--adaptive-1"
-                        style="color: #fff !important; background-color: #353535">RU</a></li>
-                <li><a href="/en/" class="nav-link header--text header--locale header--locale-active-en"
-                        style="background-color: #353535">EN</a>
+                        style="background-color: #353535; color: #fff !important">EN</a>
                 </li>
             </ul>
             <ul class="nav justify-content-center">
                 @@if(context.activeItem == "games") {
-                <li><a class="nav-link nav--link-active-en" style="color: #fff !important">Игры</a></li>
+                <li><a class="nav-link nav--link-active-en" style="color: #fff !important">Games</a></li>
                 }
                 @@if(context.activeItem != "games") {
-                <li><a href="/en/games" class="nav-link nav--link-en">Игры</a></li>
+                <li><a href="/en/games" class="nav-link nav--link-en">Games</a></li>
                 }
-                <li><a href="//news.creagoo.ru/creagoo" class="nav-link nav--link-en">Новости</a></li>
+                <li><a href="//news.creagoo.ru/creagoo" class="nav-link nav--link-en">News</a></li>
                 @@if(context.activeItem == "gallery") {
-                <li><a class="nav-link nav--link-active-en" style="color: #fff !important">Галерея</a></li>
+                <li><a class="nav-link nav--link-active-en" style="color: #fff !important">Gallery</a></li>
                 }
                 @@if(context.activeItem != "gallery") {
-                <li><a href="/gallery.html" class="nav-link nav--link-en">Галерея</a></li>
+                <li><a href="/en/gallery.html" class="nav-link nav--link-en">Gallery</a></li>
                 }
                 @@if(context.activeItem == "about") {
-                <li><a class="nav-link nav--link-active-en" style="color: #fff !important">More detailed</a></li>
+                <li><a class="nav-link nav--link-active-en" style="color: #fff !important">About</a></li>
                 }
                 @@if(context.activeItem != "about") {
-                <li><a href="/about.html" class="nav-link nav--link-en">More detailed</a></li>
+                <li><a href="/en/about.html" class="nav-link nav--link-en">About</a></li>
                 }
                 <li><a href="/2022.html" class="nav-link nav--link-en" style="border-radius: 8px; background-color: #353535">2022</a></li>
             </ul>
@@ -153,10 +153,10 @@
     <div class="collapse mt-2 p-0" id="mobilemenu">
         <div class="list-group container list-group-flush">
             <a href="#" class="list-group-item-dark list-group-item list-group-item-action" onClick="ThemeChangeButton()">
-                Сменить тему
+                Change theme
             </a>
             <a href="#" class="list-group-item-dark list-group-item list-group-item-action">
-                Текущий язык: RU
+                Language: EN
             </a>
         </div>
     </div>
@@ -165,7 +165,7 @@
 <div class="offcanvas offcanvas-bg offcanvas-end" tabindex="-1" id="canvasprojects"
     aria-labelledby="offcanvasExampleLabel">
     <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Проекты класса yl:d</h5>
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Projects of yl:d</h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
@@ -173,24 +173,24 @@
             <div class="mb-2">
                 <a href="//it.dybka.ru"
                     class="nav-link header--text bg-light fs-5 header--locale header--locale-active py-3">
-                    Все проекты yl:d
+                    All projects yl:d
                 </a>
             </div>
             <div class="mb-2">
                 <a href="//id.creagoo.ru"
                     class="nav-link header--text bg-light fs-5 header--locale header--locale-active py-3">
-                    Личный кабинет
+                    Personal account
                 </a>
             </div>
             <div class="mb-2">
                 <a href="//news.creagoo.ru"
                     class="nav-link header--text bg-light fs-5 header--locale header--locale-active py-3">
-                    Читать новости
+                    Read the news
                 </a>
             </div>
             <div class="mb-2">
                 <a class="nav-link header--text bg-light fs-5 header--locale header--locale-disable py-3">
-                    <s>Разработка сайтов</s>
+                    <s>Website development</s>
                 </a>
             </div>
         </div>
