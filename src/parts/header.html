@@ -1,10 +1,49 @@
-<header class="container header--main">
+<div class="bg-success d-none" id="changelanguagemainblock" style="--bs-bg-opacity: .2">
+    <div class="container py-2">
+        <div class="d-flex flex-wrap align-items-center">
+            <div>
+                <a href="/" aria-label="Switch language to russian"
+                    class="nav-link header--text bg-light header--locale rounded-circle px-0 mx-0 header--locale-active">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="icon"
+                        viewBox="0 0 16 16" style="margin: 10px">
+                        <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z" />
+                        <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z" />
+                    </svg>
+                </a>
+            </div>
+            <div class="ps-4">
+                <div class="d-flex flex-column">
+                    <p class="fs-4" style="margin-bottom: -5px">Переключить язык</p>
+                    <p class="mb-0" style="color: var(--text-hover-1)">Switch language</p>
+                </div>
+            </div>
+            <div class="ms-auto">
+                <button aria-label="Close block of switch language"
+                    class="btn"
+                    onClick="CloseHeaderLanguage()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="icon"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<header class="container header--main header--main-mobile">
     <div class="d-flex flex-wrap align-items-center justify-content-center">
-        <ul class="nav me-auto header--adaptive-special-4">
-            <li><a href="/" class="nav-link header--text bg-light header--locale header--locale-active">RU</a></li>
-        </ul>
+        <div class="nav me-auto header--adaptive-special-4">
+            <div>
+                <a href="/" aria-label="Переключить язык на английский"
+                    class="nav-link header--text bg-light header--locale header--locale-active">
+                    RU
+                </a>
+            </div>
+        </div>
         <div class="justify-content-center">
-            <a href="/en/">
+            <a href="/" aria-label="Перейти на главную страницу">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon header--logo-pc"
                     alt="Logo of Creagoo" width="280" viewBox="0 0 1105 169">
                     <path
@@ -41,7 +80,7 @@
         </div>
         <div class="ms-auto justify-content-center header--adaptive-4">
             <!-- MOBILE  -->
-            <button type="button" class="btn btn-light header--adaptive-2"
+            <button type="button" class="btn btn-light header--adaptive-2" aria-label="Open mobile menu"
                 data-bs-toggle="collapse" data-bs-target="#mobilemenu_full"
                 aria-expanded="false" aria-controls="mobilemenu_full">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="header--theme-icon icon"
@@ -55,32 +94,39 @@
     <!-- MOBILE -->
     <div class="collapse  header--adaptive-4 mt-2" id="mobilemenu_full">
         <div class="list-group container list-group-flush p-0">
-            <a href="/en/games" class="list-group-item list-group-item-action">
-                Games
+            <a href="/en/games" aria-label="Open page width games"
+                class="list-group-item list-group-item-action">
+                Игры
             </a>
-            <a href="/en/gallery.html" class="list-group-item list-group-item-action">
-                Gallery
+            <a href="/en/gallery.html" aria-label="Open gallery of projects"
+                class="list-group-item list-group-item-action">
+                Галерея
             </a>
-            <a href="//news.creagoo.ru/creagoo" class="list-group-item list-group-item-action">
-                News
+            <a href="//news.creagoo.ru/creagoo" aria-label="Read news of Creagoo"
+                class="list-group-item list-group-item-action">
+                Новости
             </a>
-            <a href="/en/about.html" class="list-group-item list-group-item-action">
-                About
+            <a href="/en/about.html" aria-label="About Creagoo"
+                class="list-group-item list-group-item-action">
+                Подробнее
             </a>
-            <a href="/2022.html" class="list-group-item list-group-item-action">
+            <a href="/en/2022.html" aria-label="Finals of 2022 year"
+                class="list-group-item list-group-item-action">
                 2022
             </a>
 
-            <a href="#" class="list-group-item list-group-item-action" onClick="ThemeChangeButton()" >
+            <button class="list-group-item list-group-item-action"
+                onClick="ThemeChangeButton()" aria-label="Switch light theme to dark">
                 Change theme
-            </a>
-            <a class="list-group-item text-tablet list-group-item-action">
+            </button>
+            <div class="list-group-item text-tablet list-group-item-action">
                 Language: EN
-            </a>
+            </div>
 
             <!-- SUPER MOBILE -->
-            <a href="/" class="list-group-item text-mobile list-group-item-action">
-                Change lang
+            <a href="/en" class="list-group-item text-mobile list-group-item-action"
+            aria-label="Switch language to russian">
+                Change language
             </a>
         </div>
     </div>
@@ -90,40 +136,42 @@
     <div class="container">
         <div class="d-flex flex-wrap align-items-center justify-content-center">
             <ul class="nav me-auto">
-                <li><a href="/" class="nav-link header--text header--locale bg-light header--locale-active">RU</a></li>
-                <li><a class="nav-link header--text bg-light header--locale header--locale-disable header--adaptive-1">EN</a></li>
+                <li><a href="/" aria-label="Switch language to russian"
+                        class="nav-link header--text bg-light header--locale header--locale-active">RU</a></li>
+                <li class="nav-link header--text header--locale bg-light header--locale-disable header--adaptive-1">EN</li>
             </ul>
             <ul class="nav justify-content-center header--adaptive-3">
                 @@if(context.activeItem == "games") {
-                <li><a class="nav-link nav--link-active">Games</a></li>
+                <li><a class="nav-link nav--link-active" aria-label="Games of Creagoo">Games</a></li>
                 }
                 @@if(context.activeItem != "games") {
-                <li><a href="/en/games" class="nav-link nav--link">Games</a></li>
+                <li><a href="/games" class="nav-link nav--link" aria-label="Games of Creagoo">Games</a></li>
                 }
-                <li><a href="//news.creagoo.ru/creagoo" class="nav-link nav--link">News</a></li>
+                <li><a href="//news.creagoo.ru/creagoo" class="nav-link nav--link" aria-label="Read news of Creagoo">News</a></li>
                 @@if(context.activeItem == "gallery") {
-                <li><a class="nav-link nav--link-active">Gallery</a></li>
+                <li><a class="nav-link nav--link-active" aria-label="Gallery of projects">Gallery</a></li>
                 }
                 @@if(context.activeItem != "gallery") {
-                <li><a href="/en/gallery.html" class="nav-link nav--link">Gallery</a></li>
+                <li><a href="/gallery.html" class="nav-link nav--link" aria-label="Gallery of projects">Gallery</a></li>
                 }
                 @@if(context.activeItem == "about") {
-                <li><a class="nav-link nav--link-active">About</a></li>
+                <li><a class="nav-link nav--link-active" aria-label="About Creagoo">About</a></li>
                 }
                 @@if(context.activeItem != "about") {
-                <li><a href="/en/about.html" class="nav-link nav--link">About</a></li>
+                <li><a href="/about.html" class="nav-link nav--link" aria-label="About Creagoo">About</a></li>
                 }
                 <li><a href="/2022.html" class="nav-link bg-light nav--link text-dark"
-                        style="border-radius: 8px">2022</a></li>
+                        style="border-radius: 8px" aria-label="Finals of 2022 year">2022</a></li>
             </ul>
             <div class="ms-auto justify-content-center">
-                <button onClick="ThemeChangeButton()" type="button" class="btn btn-light header--adaptive-1 header--locale">
+                <button onClick="ThemeChangeButton()" type="button" aria-label="Switch light theme to dark"
+                    class="btn btn-light header--adaptive-1 header--locale">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="header--theme-icon icon"
                         viewBox="0 0 16 16">
                         <use id="themechangebutton_icon" xlink:href="/img/icons/themes.svg#auto" />
                     </svg>
                 </button>
-                <button type="button" class="btn btn-light header--adaptive-1"
+                <button type="button" class="btn btn-light header--adaptive-1" aria-label="Открыть десктопное меню"
                     data-bs-toggle="offcanvas" data-bs-target="#canvasprojects"
                     aria-controls="canvasprojects">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="header--theme-icon icon"
@@ -135,7 +183,7 @@
 
                 <!-- MOBILE  -->
                 <button type="button" class="btn btn-light header--adaptive-2"
-                    data-bs-toggle="collapse" data-bs-target="#mobilemenu"
+                    data-bs-toggle="collapse" data-bs-target="#mobilemenu" aria-label="Открыть мобильное меню"
                     aria-expanded="false" aria-controls="mobilemenu">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="header--theme-icon icon" viewBox="0 0 16 16">
                         <path fill-rule="evenodd"
@@ -148,41 +196,47 @@
     <!-- TABLET -->
     <div class="collapse  mt-2 p-0" id="mobilemenu">
         <div class="list-group container list-group-flush">
-            <a href="#" class="list-group-item list-group-item-action" onClick="ThemeChangeButton()">
-                Change theme
-            </a>
-            <a href="#" class="list-group-item list-group-item-action">
-                Language: EN
-            </a>
+            <button class="list-group-item list-group-item-action"
+                onClick="ThemeChangeButton()" aria-label="Переключить светлую и темную тему">
+                Сменить тему
+            </button>
+            <div href="#" class="list-group-item list-group-item-action">
+                Текущий язык: RU
+            </div>
         </div>
     </div>
 </nav>
 
 <div class="offcanvas offcanvas-bg offcanvas-end" tabindex="-1" id="canvasprojects" aria-labelledby="offcanvasExampleLabel">
     <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Projects of yl:d</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <p class="offcanvas-title mb-0 h5" id="offcanvasExampleLabel">Проекты класса yl:d</p>
+        <button type="button" aria-label="Закрыть меню"
+            class="btn-close" data-bs-dismiss="offcanvas" aria-label="Кнопка закрыть"></button>
     </div>
     <div class="offcanvas-body">
         <div class="d-flex flex-wrap flex-column">
             <div class="mb-2">
-                <a href="//it.dybka.ru/en" class="nav-link header--text bg-light fs-5 header--locale header--locale-active py-3">
-                    All projects yl:d
+                <a href="//it.dybka.ru" aria-label="Смотреть все проекты ylid"
+                    class="nav-link header--text bg-light fs-5 header--locale header--locale-active py-3">
+                    Все проекты yl:d
                 </a>
             </div>
             <div class="mb-2">
-                <a href="//id.creagoo.ru" class="nav-link header--text bg-light fs-5 header--locale header--locale-active py-3">
-                    Personal account
+                <a href="//id.creagoo.ru" aria-label="Открыть личный кабинет аквариум"
+                    class="nav-link header--text bg-light fs-5 header--locale header--locale-active py-3">
+                    Личный кабинет
                 </a>
             </div>
             <div class="mb-2">
-                <a href="//news.creagoo.ru" class="nav-link header--text bg-light fs-5 header--locale header--locale-active py-3">
-                    Read the news
+                <a href="//news.creagoo.ru" aria-label="Читать новости спешиал"
+                class="nav-link header--text bg-light fs-5 header--locale header--locale-active py-3">
+                    Читать новости
                 </a>
             </div>
             <div class="mb-2">
-                <a class="nav-link header--text bg-light fs-5 header--locale header--locale-disable py-3">
-                    <s>Website development</s>
+                <a href="//it.dybka.ru" aria-label="Читать новости спешиал"
+                    class="nav-link fs-5 header--locale header--locale-active pt-1">
+                    Подробнее
                 </a>
             </div>
         </div>
